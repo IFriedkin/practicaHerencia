@@ -1,7 +1,7 @@
 package razas;
 
 /**
- *
+ * Clase Escuadron.
  * @author Ibrahim Gonzáez Cabrera
  */
 public abstract class Escuadron {
@@ -17,7 +17,8 @@ public abstract class Escuadron {
      * @param nvAtaque
      * @param nvDefensa 
      */
-    public Escuadron(String nombre, int numVictorias, double nvAtaque, double nvDefensa) {
+    public Escuadron(String nombre, int numVictorias, double nvAtaque, 
+            double nvDefensa) {
         this.nombre = nombre;
         this.numVictorias = numVictorias;
         this.nvAtaque = nvAtaque;
@@ -37,5 +38,15 @@ public abstract class Escuadron {
     public void setNvAtaque(double nvAtaque) {this.nvAtaque = nvAtaque;}
     public void setNvDefensa(double nvDefensa) {this.nvDefensa = nvDefensa;}
 
-    //número de v ictorias, niv el de ataque y niv el de defensa. 
+    /**
+     * Se encarga de calcular el ataque del escuadrón.
+     * @return El poder de ataque del escuadrón.
+     */
+    public abstract double calcularAtaque();
+    
+    /**
+     * Se encarga de calcular la defensa del escuadrón.
+     * @return La capacidad defensiva del escuadrón.
+     */
+    public abstract double calcularDefensa();
 }
